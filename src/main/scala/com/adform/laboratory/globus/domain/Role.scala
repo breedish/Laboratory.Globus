@@ -1,9 +1,10 @@
 package com.adform.laboratory.globus.domain
 
 /** @author zenind */
-sealed trait Role
+sealed trait Role extends Serializable
 
-case object AdminRole extends Role
-case object PodLeaderRole extends Role
-case object RodKeeperRole extends Role
+case object Admin extends Role
+case object PodLead extends Role
+case object User extends Role
+case object Viewer extends Role
 case class CustomRole(name: String) extends Role

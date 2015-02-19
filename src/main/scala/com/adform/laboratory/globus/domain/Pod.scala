@@ -3,7 +3,7 @@ package com.adform.laboratory.globus.domain
 import scala.collection.immutable.Set
 
 /** @author zenind */
-case class Pod(name: String, employees: Set[Employee]) {
+case class Pod(id: String = null, name: String, employees: Set[Employee]) {
   require(name != null && employees != null)
 
   def assignEmployee(e: Employee) = employees + e
